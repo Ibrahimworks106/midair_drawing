@@ -1,0 +1,103 @@
+"""Configuration constants for the Air Drawing application."""
+
+# Camera settings
+DEFAULT_CAMERA_INDEX = 1
+FALLBACK_CAMERA_INDEX = 0
+
+# Model settings
+MODEL_PATH = 'hand_landmarker.task'
+MODEL_URL = "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task"
+
+# Detection confidence thresholds
+MIN_HAND_DETECTION_CONFIDENCE = 0.7
+MIN_HAND_PRESENCE_CONFIDENCE = 0.7
+MIN_TRACKING_CONFIDENCE = 0.5
+NUM_HANDS = 1
+
+# Landmark indices (MediaPipe Hand Landmarks)
+LANDMARK_INDEX_FINGER_TIP = 8
+LANDMARK_INDEX_FINGER_PIP = 6
+LANDMARK_MIDDLE_FINGER_TIP = 12
+LANDMARK_MIDDLE_FINGER_PIP = 10
+LANDMARK_RING_FINGER_TIP = 16
+LANDMARK_RING_FINGER_DIP = 14
+LANDMARK_PINKY_TIP = 20
+LANDMARK_PINKY_DIP = 18
+
+# Drawing settings
+DEFAULT_SMOOTH_BUFFER_SIZE = 5
+DEFAULT_MIN_MOVEMENT_DISTANCE = 3
+DEFAULT_DRAWING_THICKNESS = 5
+DEFAULT_ERASER_THICKNESS = 30
+
+# UI settings
+TOOLBAR_HEIGHT = 70
+TOOLBAR_Y_POSITION = 70
+COLOR_CIRCLE_RADIUS = 22
+COLOR_CIRCLE_BORDER_RADIUS = 25
+COLOR_CIRCLE_Y = 35
+COLOR_SPACING_FACTOR = 7  # w // 7 * (i + 1)
+SELECTION_THRESHOLD = 30
+
+# Mode indicator settings
+MODE_INDICATOR_X1 = 15
+MODE_INDICATOR_Y1_OFFSET = 55
+MODE_INDICATOR_X2 = 180
+MODE_INDICATOR_Y2_OFFSET = 25
+MODE_INDICATOR_TEXT_X = 22
+MODE_INDICATOR_TEXT_Y_OFFSET = 33
+
+# Color picker configuration
+COLORS_LIST = [
+    ("RED", (0, 0, 255)),
+    ("BLUE", (255, 0, 0)),
+    ("GREEN", (0, 255, 0)),
+    ("YELLOW", (0, 255, 255)),
+    ("WHITE", (255, 255, 255)),
+    ("ERASE", (80, 80, 80))
+]
+DEFAULT_COLOR = (0, 255, 0)  # Green
+
+# Mode colors
+MODE_COLORS = {
+    "DRAW": (0, 200, 80),
+    "STOP": (0, 200, 220),
+    "CLEAR": (220, 60, 60)
+}
+DEFAULT_MODE = "STOP"
+
+# Clear gesture timing
+CLEAR_GESTURE_DURATION = 1.0  # seconds
+
+# Display settings
+WINDOW_NAME = "Air Drawing"
+SPLASH_DISPLAY_DURATION = 2000  # milliseconds
+SAVE_MESSAGE_DURATION = 2  # seconds
+
+# Canvas blending
+CANVAS_ALPHA = 0.8
+FRAME_ALPHA = 1.0
+TOOLBAR_OVERLAY_ALPHA = 0.7
+INSTRUCTIONS_OVERLAY_ALPHA = 0.6
+
+# Font settings
+FONT_FACE = cv2.FONT_HERSHEY_SIMPLEX
+FONT_SCALE_SPLASH_TITLE = 1.8
+FONT_SCALE_SPLASH_SUBTITLE = 1.0
+FONT_SCALE_MODE = 0.6
+FONT_SCALE_INSTRUCTIONS = 0.4
+FONT_SCALE_FPS = 0.5
+FONT_THICKNESS_DEFAULT = 2
+FONT_THICKNESS_MODE = 2
+FONT_THICKNESS_INSTRUCTIONS = 1
+FONT_THICKNESS_FPS = 1
+
+# Colors for UI
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+GRAY_LIGHT = (200, 200, 200)
+GRAY_MEDIUM = (180, 180, 180)
+GRAY_DARK = (20, 20, 20)
+
+# Instructions text
+INSTRUCTIONS_TEXT = "1 finger=Draw  |  2 fingers=Stop  |  Palm=Clear  |  S=Save  |  Q=Quit"
